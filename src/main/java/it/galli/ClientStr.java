@@ -23,7 +23,7 @@ public class ClientStr {
             outVersoServer = new DataOutputStream(miosocket.getOutputStream());
             inDalServer = new BufferedReader(new InputStreamReader(miosocket.getInputStream()));
             stringRicevutaDalServer=inDalServer.readLine();
-             System.out.println("server: "+stringRicevutaDalServer);
+            System.out.println("server: "+stringRicevutaDalServer);
         }
         catch (UnknownHostException a){
             System.err.println("Host sconosciuto");
@@ -43,13 +43,10 @@ public class ClientStr {
                 stringRicevutaDalServer = inDalServer.readLine();
                 System.out.println("server 1: " + stringRicevutaDalServer);
                 stringaUtente = tastiera.readLine();
-                //System.out.println("invio la stringa al server e attendo...");
                 outVersoServer.writeBytes(stringaUtente + '\n');
 
                 stringRicevutaDalServer = inDalServer.readLine();
                 System.out.println("server 1: " + stringRicevutaDalServer);
-                
-             
              
              }
          }
