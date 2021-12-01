@@ -15,7 +15,7 @@ public class ClientStr {
     BufferedReader inDalServer;
 
     public Socket connetti(){
-        System.out.println("2 CLIENT partito in esecuzione ...");
+        System.out.println(" CLIENT partito in esecuzione ...");
         try
         {
             tastiera= new BufferedReader(new InputStreamReader(System.in));

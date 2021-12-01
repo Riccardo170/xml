@@ -53,16 +53,6 @@ public void comunica()
              System.out.println ("numero 1 : " +numero1);
 
             int Numero1=Integer.parseInt(numero1);
-
-            
-           
-            outVersoClient.writeBytes("Vuoi effettuare un nuovo calcolo (Y/N)?"+'\n');
-            stringaricevuta=inDalClient.readLine();
-            if(stringaricevuta.equals("N")){
-                outVersoClient.writeBytes("socket in chiusura"+'\n');
-                client.close();
-                break;
-            }
              
         }
     }
