@@ -9,7 +9,7 @@ public class ClientStr {
     int portaServer = 6789;
     Socket miosocket;
     BufferedReader tastiera;
-    String stringUtente;
+    String stringaUtente;
     String stringRicevutaDalServer;
     DataOutputStream outVersoServer;
     BufferedReader inDalServer;
@@ -40,28 +40,15 @@ public class ClientStr {
      public void comunica(){
          try{
              for(;;){
-             stringRicevutaDalServer=inDalServer.readLine();
-             System.out.println("server: "+stringRicevutaDalServer);
-             stringUtente = tastiera.readLine();
-             outVersoServer.writeBytes( stringUtente+'\n');
+                stringRicevutaDalServer = inDalServer.readLine();
+                System.out.println("server 1: " + stringRicevutaDalServer);
+                stringaUtente = tastiera.readLine();
+                //System.out.println("invio la stringa al server e attendo...");
+                outVersoServer.writeBytes(stringaUtente + '\n');
 
-             stringRicevutaDalServer=inDalServer.readLine();
-             System.out.println("server: "+stringRicevutaDalServer);
-             stringUtente = tastiera.readLine(); 
-             outVersoServer.writeBytes( stringUtente+'\n');
-             
-             stringRicevutaDalServer=inDalServer.readLine();
-             System.out.println("server: "+stringRicevutaDalServer);
-             stringUtente = tastiera.readLine();
-             outVersoServer.writeBytes( stringUtente+'\n');
-             
-
-             stringRicevutaDalServer=inDalServer.readLine();
-             System.out.println("server: "+stringRicevutaDalServer);
-             stringRicevutaDalServer=inDalServer.readLine();
-             System.out.println("server: "+stringRicevutaDalServer);
-             stringUtente = tastiera.readLine();
-             outVersoServer.writeBytes( stringUtente+'\n');
+                stringRicevutaDalServer = inDalServer.readLine();
+                System.out.println("server 1: " + stringRicevutaDalServer);
+                
              
              
              }
@@ -73,6 +60,12 @@ public class ClientStr {
              System.exit(1);
          }
      }
+
+
+
+     /**
+     * main client
+     */
 
      public static void main (String args[]){
         ClientStr cliente = new ClientStr();
