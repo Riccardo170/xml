@@ -10,13 +10,16 @@ public class ServerStr {
     String numero1 = null;
     String stringaricevuta = null;
     String stringaModificata = null;
-    int risultato = 0;
     int turno = 0;
-    String Risultato = null;
+    
 
     BufferedReader inDalClient;
     DataOutputStream outVersoClient;
     int numero = new java.util.Random().nextInt(100) + 1;//creazione di un numero random
+
+    /**
+    * metodo per stabilire la connessione con il client
+    */
 
     public Socket attendi() {
         try {
@@ -38,6 +41,10 @@ public class ServerStr {
         return client;
 
     }
+
+    /**
+    * metodo per comunicare con il client
+    */
 
     public void comunica() {
 

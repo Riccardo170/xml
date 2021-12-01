@@ -14,6 +14,9 @@ public class ClientStr {
     DataOutputStream outVersoServer;
     BufferedReader inDalServer;
 
+    /**
+      * metodo stabilire la connessione con il server 
+      */
     public Socket connetti(){
         System.out.println(" CLIENT partito in esecuzione ...");
         try
@@ -36,6 +39,10 @@ public class ClientStr {
             }
             return miosocket;
      }
+
+      /**
+      * metodo per comunicare con il server
+      */
 
      public void comunica(){
          try{
