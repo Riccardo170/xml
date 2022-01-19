@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class root {
     private int annoDiInizio;
-    private ArrayList <aula> aula;
+    private aula aula=new aula();
     private String classe;
     private int numeroFinestre;
     private String specializzazione;
@@ -21,11 +21,12 @@ public class root {
         this.annoDiInizio = annoDiInizio;
     }
 
-    public ArrayList<aula> getAula() {
+
+    public aula getAula() {
         return aula;
     }
 
-    public void setAula(ArrayList<aula> aula) {
+    public void setAula(aula aula) {
         this.aula = aula;
     }
 
